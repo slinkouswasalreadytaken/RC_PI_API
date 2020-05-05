@@ -41,6 +41,27 @@ else{// code for IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
+document.addEventListener("keypress", function(event) {
+    if (event.keyCode == 87) {
+        alert('forward')
+    }
+    else if (event.keyCode == 83) {
+        alert('backward')
+    }
+    else if (event.keyCode == 65) {
+        alert('left')
+    }
+    else if (event.keyCode == 68) {
+        alert('right')
+    }
+    else alert('nothing')
+})
+       //a=65
+    //d=68
+    //s=83
+    //w=87
+    
+    
 function setDown() {
     document.getElementById("mouseStat").innerHTML="down";
 }
@@ -91,6 +112,11 @@ function fixXY(x,y) {
     return ("X="+theX+"&Y="+theY);
 }
 
+    
+
+    
+    
+    
 
 function sendCoor(x,y) {
     var coor = fixXY(x,y);
@@ -102,6 +128,9 @@ function sendCoor(x,y) {
     document.getElementById("demo").innerHTML = coor;
     }
 }
+   
+    
+    
 </script>
 
 </body>
