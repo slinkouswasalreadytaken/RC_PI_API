@@ -42,16 +42,16 @@ else{// code for IE6, IE5
 }
 
 document.addEventListener("keypress", function(event) {
-    if (event.keyCode == KeyW) {
+    if (event.code == KeyW) {
         alert('forward');
     }
-    else if (event.keyCode == KeyS) {
+    else if (event.code == KeyS) {
         alert('backward');
     }
-    else if (event.keyCode == KeyA) {
+    else if (event.code == KeyA) {
         alert('left');
     }
-    else if (event.keyCode == KeyD) {
+    else if (event.code == KeyD) {
         alert('right');
     }
     else alert('no keypress');
