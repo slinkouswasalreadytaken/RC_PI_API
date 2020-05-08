@@ -41,21 +41,7 @@ else{// code for IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-document.addEventListener("keypress", function(event) {
-    if (event.code == KeyW) {
-        alert('forward')
-    }
-    else if (event.code == KeyS) {
-        alert('backward')
-    }
-    else if (event.code == KeyA) {
-        alert('left')
-    }
-    else if (event.code == KeyD) {
-        alert('right')
-    }
-    else alert('no keypress')
-})
+
     document.onkeydown = function(event) {
         switch (event.keyCode) {
            case 37:
@@ -73,10 +59,7 @@ document.addEventListener("keypress", function(event) {
         }
     };
 
-       //a=65
-    //d=68
-    //s=83
-    //w=87
+
     
     
 function setDown() {
