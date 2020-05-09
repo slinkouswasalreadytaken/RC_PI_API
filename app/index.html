@@ -44,38 +44,38 @@ else{// code for IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-var MotorL;
-var MotorR;
+var MotorL=0;
+var MotorR=0;
 
-    document.onkeydown = function(event) {
-        switch (event.keyCode) {
-           case 37:
-                //alert('Turn Left');
-                var MotorR = 1;
-                var MotorL = -1;
-              break;
-           case 38:
-                //alert('Drive Forwards');
-                var MotorR = 1;
-                var MotorL = 1;
-              break;
-           case 39:
-                //alert('Turn Right');
-                var MotorR = -1;
-                var MotorL = 1;
-              break;
-           case 40:
-                //alert('Drive Backwards');
-                var MotorR = -1;
-                var MotorL = -1;
-              break;
-           default:
-                var MotorR = 0;
-                var MotorL = 0;
-        }
-        console.log("Left motor:" + MotorL);
-        console.log("Right motor:" + MotorR);
+document.onkeydown = function(event) {
+    switch (event.keyCode) {
+       case 37:
+            //alert('Turn Left');
+            MotorR = 1;
+            MotorL = -1;
+          break;
+       case 38:
+          //alert('Drive Forwards');
+            MotorR = 1;
+            MotorL = 1;
+          break;
+       case 39:
+            //alert('Turn Right');
+            MotorR = -1;
+            MotorL = 1;
+          break;
+       case 40:
+            //alert('Drive Backwards');
+            MotorR = -1;
+            MotorL = -1;
+          break;
+       default:
+            MotorR = 0;
+            MotorL = 0;
     };
+    console.log("Left motor:" + MotorL);
+    console.log("Right motor:" + MotorR);
+};
 
 
 
