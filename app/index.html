@@ -48,27 +48,29 @@ else{// code for IE6, IE5
     document.onkeydown = function(event) {
         switch (event.keyCode) {
            case 37:
-                alert('Turn Left');
+                //alert('Turn Left');
                 var MotorR = 1;
                 var MotorL = -1;
               break;
            case 38:
-                alert('Drive Forwards');
+                //alert('Drive Forwards');
                 var MotorR = 1;
                 var MotorL = 1;
               break;
            case 39:
-                alert('Turn Right');
+                //alert('Turn Right');
                 var MotorR = 1;
                 var MotorL = -1;
               break;
            case 40:
-                alert('Drive Backwards');
+                //alert('Drive Backwards');
                 var MotorR = -1;
                 var MotorL = -1;
               break;
         }
     };
+           console.log("Left motor:" + MotorL);
+           console.log("Right motor:" + MotorR);
 
 
     
