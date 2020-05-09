@@ -33,6 +33,9 @@
 
 var thisHost=location.hostname;
 
+var MotorL = 0;
+var MotorR = 0;
+
 var xmlhttp;
 if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
@@ -45,19 +48,25 @@ else{// code for IE6, IE5
     document.onkeydown = function(event) {
         switch (event.keyCode) {
            case 37:
-                alert('Left key pressed');
+                alert('Turn Left');
+                var MotorR = 1;
+                var MotorL = -1;
               break;
            case 38:
-                alert('Up key pressed');
+                alert('Drive Forwards');
+                var MotorR = 1;
+                var MotorL = 1;
               break;
            case 39:
-                alert('Right key pressed');
+                alert('Turn Right');
+                var MotorR = 1;
+                var MotorL = -1;
               break;
            case 40:
-                alert('Down key pressed');
+                alert('Drive Backwards');
+                var MotorR = -1;
+                var MotorL = -1;
               break;
-           else:
-                alert('No key pressed');
         }
     };
 
